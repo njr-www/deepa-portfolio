@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title><%= @document.title %> | Deepa's Portfolio</title>
+    <title><%= if @document.title then "#{@document.title} | #{@site.title}" else @site.title %></title>
 </head>
 <body>
     <h1><%= @document.title %></h1>
