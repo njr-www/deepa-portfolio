@@ -10,4 +10,7 @@
   "author": "Nishant Rodrigues <nishantjr@gmail.com>",
   "private": true,
   "license": "UNLICENSED",
+  "dependencies": {
+    "docpad": "^6.78.4"
+  }
 }
