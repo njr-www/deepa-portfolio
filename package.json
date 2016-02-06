@@ -12,6 +12,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "docpad": "~6.78.4",
-    "docpad-plugin-eco": "~2.1.0"
+    "docpad-plugin-eco": "~2.1.0",
+    "docpad-plugin-marked": "~2.3.0"
   }
 }
