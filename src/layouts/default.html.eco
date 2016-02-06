@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title><%= if @document.title then "#{@document.title} | #{@site.title}" else @site.title %></title>
+    <title><%= @getPreparedTitle() %></title>
 </head>
 <body>
     <h1><%= @document.title %></h1>
