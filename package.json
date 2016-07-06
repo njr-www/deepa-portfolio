@@ -4,6 +4,7 @@
   "description": "Website for Deej's portfolio",
   "main": "index.js",
   "scripts": {
+    "start": "gulp serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/nishantjr/deepa-portfolio/issues"
   },
-  "homepage": "https://github.com/nishantjr/deepa-portfolio#readme"
+  "homepage": "https://github.com/nishantjr/deepa-portfolio#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^4.1.0"
+  }
 }
