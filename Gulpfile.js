@@ -9,3 +9,4 @@ gulp.task('serve', (cb) => {
     });
 })
 
+gulp.task('default', ['serve'])

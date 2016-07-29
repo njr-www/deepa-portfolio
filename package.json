@@ -4,7 +4,7 @@
   "description": "Website for Deej's portfolio",
   "main": "index.js",
   "scripts": {
-    "start": "gulp serve",
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
