@@ -20,6 +20,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.2",
     "gulp": "^3.9.1",
-    "gulp-connect": "^4.1.0"
+    "gulp-connect": "^4.1.0",
+    "gulp-watch": "^4.3.9"
   }
 }
