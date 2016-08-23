@@ -1,26 +1,26 @@
 'use strict'
 
 const gulp = require('gulp'),
+      filter = require('gulp-filter'),
       connect = require('gulp-connect'),
+      md = require('gulp-markdown-it'),
       watch = require('gulp-watch'),
       sass = require('gulp-sass')
 
 const sassOptions = { includePaths: ['node_modules/bootstrap/scss/'] }
 
-gulp.task('build-sass', function () {
-   return gulp.src('./sass/**/*.scss')
-     .pipe(sass(sassOptions).on('error', sass.logError))
-     .pipe(gulp.dest('./.build/www/css/'));
-});
-
-gulp.task('build-src', function () {
-   return gulp.src(['src/**/*'])
-     .pipe(gulp.dest('.build/www/'));
-});
-
-gulp.task('build', ['build-src', 'build-sass'], function () {
-   return gulp.src(['src/**/*'])
-     .pipe(gulp.dest('.build/www/'));
+gulp.task('build', function () {
+   const stream = gulp.src(['src/**/*'])
+   const mdFilter = filter('**/*.md', {restore: true})
+   const sassFilter = filter('**/*.scss', {restore: true})
+   return stream
+        .pipe(mdFilter)
+            .pipe(md())
+        .pipe(mdFilter.restore)
+        .pipe(sassFilter)
+            .pipe(sass(sassOptions).on('error', sass.logError))
+        .pipe(sassFilter.restore)
+        .pipe(gulp.dest('.build/www/'))
 });
 
 gulp.task('serve', ['build'], (cb) => {
@@ -28,8 +28,7 @@ gulp.task('serve', ['build'], (cb) => {
         root: '.build/www/'
     });
 
-    watch('src/**/*', function() { gulp.start('build-src') })
-    watch('sass/**/*', function() { gulp.start('build-sass') })
+    watch('src/**/*', function() { gulp.start('build') })
 })
 
 gulp.task('default', ['serve'])
