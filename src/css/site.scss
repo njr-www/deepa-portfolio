@@ -1,5 +1,8 @@
 // Core variables and mixins
+$enable-flex:               true;
 @import "variables";
+$enable-flex:               true;
+
 @import "mixins";
 
 // Reset and dependencies
@@ -17,3 +20,42 @@
 @import "buttons";
 
 @import "list-group";
+@import "jumbotron";
+
+body {
+    @extend .container;
+}
+
+.first-row {
+    align-items: flex-end;
+}
+address {
+    bottom: 0px;
+}
+
+div:first-child { text-align: right; }
+.row {
+    padding-bottom: 10px;
+}
+
+figure {
+    margin: 0px;
+    position: relative;
+}
+figure img { @extend .img-fluid; }
+
+figure figcaption {
+    position: absolute;
+    padding: 5px;
+    font-family: serif;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px black;
+
+    top: -5px;
+}
+
+figure             figcaption { left: 20px; }
+figure:first-child figcaption { right: 20px; left: auto; }
+
+.title-bottom figcaption { bottom: 0px; top: auto; }
