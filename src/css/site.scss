@@ -1,7 +1,6 @@
 // Core variables and mixins
-$enable-flex:               true;
 @import "variables";
-$enable-flex:               true;
+$enable-flex: true;
 
 @import "mixins";
 
@@ -13,27 +12,35 @@ $enable-flex:               true;
 @import "reboot";
 @import "type";
 @import "images";
-@import "code";
 @import "grid";
-@import "tables";
-@import "forms";
-@import "buttons";
 
 @import "list-group";
-@import "jumbotron";
 
 body {
     @extend .container;
+    font-family: serif;
 }
 
-.first-row {
-    align-items: flex-end;
-}
+header { align-items: flex-end; }
+
+header, body > div
+{ @extend .row; }
+
 address {
     bottom: 0px;
+    margin-bottom: 0px;
+    h1 { font-variant: small-caps; }
+    h1 {
+        text-transform: uppercase;
+        font-size: 38px;
+    }
 }
 
-div:first-child { text-align: right; }
+address { text-align: center; }
+@include media-breakpoint-up(md) {
+    .row div:first-child, address { text-align: right; }
+}
+
 .row {
     padding-bottom: 10px;
 }
@@ -51,7 +58,6 @@ figure figcaption {
     font-size: 40px;
     color: white;
     text-shadow: 2px 2px black;
-
     top: -5px;
 }
 
