@@ -1,0 +1,11 @@
+{
+  "name": "college-notes",
+  "version": "1.0.0",
+  "description": "Repository to store lecture notes (with some things like previewing notes on",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nishant Rodrigues",
+  "license": "CC-BY-NC-SA-4.0\t"
+}
