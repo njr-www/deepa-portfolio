@@ -23,3 +23,11 @@ gulp.task('build', function() {
         .pipe(applyTemplate('template.html'))
         .pipe(gulp.dest('.build/www/'))
 })
+
+gulp.task('serve', ['build'], function() {
+    const connect = require('gulp-connect')
+    const watch = require('gulp-watch')
+
+    connect.server({ root: '.build/www' })
+    watch('src/**/*', function() { gulp.start('build') } )
+})
