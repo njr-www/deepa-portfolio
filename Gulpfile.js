@@ -2,10 +2,11 @@
 
 const gulp = require('gulp')
 const markdown = require('gulp-markdown-it')
-const tap = require('gulp-tap')
+const connect = require('gulp-connect')
 
 function applyTemplate(templateFile) {
     const fs = require('fs')
+    const tap = require('gulp-tap')
 
     return tap(function(vinyl) {
             const template = fs.readFileSync(templateFile)
@@ -20,14 +21,17 @@ gulp.task('build', function() {
     return gulp
         .src('src/**/*')
         .pipe(markdown())
+        .pipe(connect.reload())
         .pipe(applyTemplate('template.html'))
         .pipe(gulp.dest('.build/www/'))
 })
 
 gulp.task('serve', ['build'], function() {
-    const connect = require('gulp-connect')
     const watch = require('gulp-watch')
 
-    connect.server({ root: '.build/www' })
+    connect.server({
+        root: '.build/www',
+        livereload: true
+        })
     watch('src/**/*', function() { gulp.start('build') } )
 })
