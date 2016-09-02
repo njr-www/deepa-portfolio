@@ -4,8 +4,12 @@
   "description": "Repository to store lecture notes (with some things like previewing notes on",
   "main": "index.js",
   "scripts": {
+    "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nishant Rodrigues",
-  "license": "CC-BY-NC-SA-4.0\t"
+  "license": "CC-BY-NC-SA-4.0\t",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
 }
