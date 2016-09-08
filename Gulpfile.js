@@ -9,6 +9,7 @@ function applyTemplate(templateFile) {
     const tap = require('gulp-tap')
 
     return tap(function(vinyl) {
+        if (!vinyl.contents) return     // Ignore directories
         const template = fs.readFileSync(templateFile)
                            .toString().split('@@CONTENT@@')
         const begin = template[0], end = template[1]
