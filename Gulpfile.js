@@ -9,12 +9,12 @@ function applyTemplate(templateFile) {
     const tap = require('gulp-tap')
 
     return tap(function(vinyl) {
-            const template = fs.readFileSync(templateFile)
-                               .toString().split('@@CONTENT@@')
-            const begin = template[0], end = template[1]
-            vinyl.contents = Buffer.concat([
-                new Buffer(begin), vinyl.contents, new Buffer(end)])
-        })
+        const template = fs.readFileSync(templateFile)
+                           .toString().split('@@CONTENT@@')
+        const begin = template[0], end = template[1]
+        vinyl.contents = Buffer.concat([
+            new Buffer(begin), vinyl.contents, new Buffer(end)])
+    })
 }
 
 gulp.task('build', function() {
