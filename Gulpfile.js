@@ -1,8 +1,8 @@
 'use strict'
 
-const gulp = require('gulp')
-const markdown = require('gulp-markdown-it')
-const connect = require('gulp-connect')
+const gulp = require('gulp'),
+      connect = require('gulp-connect'),
+      markdown = require('gulp-markdown-it')
 
 function applyTemplate(templateFile) {
     const fs = require('fs')
