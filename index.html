@@ -1,36 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Khayr</title>
-    <style> img { max-width: 100%; } </style>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  </head>
-  <body class='container'>
-  <div class='row'>
-    <div class='branding col-2'></div>
-    <div class='content col-10'>
-        <h2>Fun letters</h2>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+          crossorigin="anonymous"
+     >
+    <style>
+        @media (min-width: 800px)  {
+           .container {
+              width: 800px;
+           }   
+        }
+
+        img     { max-width: 100%; }
+        body    { max-width: 700px; font-family: serif; }
+        h1      { text-align: center; font-size: 30px;
+                  border-bottom: 1px solid gray;
+                  margin-top: 40px; 
+                }
+        p       { text-align: center; font-size: 18px; }
+        .left   { text-align: right; }
+
+        figure      { display: inline-table; position: relative; }
+        figcaption  { display: table-caption; caption-side: bottom;
+                      position: absolute; bottom: 0px;
+                      padding-right: 10px; padding-bottom: 5px;
+                      text-shadow: 1px 1px black;
+                      color: white;
+                    }
+    </style>
+</head>
+<body class='container'>
+    <div class='row'><h1 class='col'> Flat-pack stackable stools </h1></div>
+    <div class='row'><div class='col'><p> During a two month apprenticeship
+        program in Bhuj, Gujurat, we worked on a project that was developing space
+        saving furniture for lower income households. The project was
+        facilitated by Hunnarshala, aimed to design furniture that would be mass
+        produced by the local artisans. </p> </div> </div>
+    <div class='row'>
+        <div class='col-md-6 left'><figure><img src='images/stacking-stools/katchi-octogon.jpg' />
+            <figcaption class='left'> Inspired by the octagonal motif ubiquitous
+            in Kutchi crafts</figcaption></figure>
+            <figure><img src='images/stacking-stools/stacked.jpg' />
+                <figcaption>The stools stack for easy storage</figcaption>
+                </figure>
+        </div>
+        <div class='col-md-6'>
+            <figure><img src='images/stacking-stools/display.jpg' /> </figure>
+            <figure><img src='images/stacking-stools/assemblyInstructions.png' />
+                <figcaption class='left'>Assembly Instructions</figcaption></figure>
+        </div>
     </div>
-  </div>
-  <div class='row'>
 
-    <div class='branding col-2'>
-        <img src='Khayr.png' width='80px' />
-    </div>
+    <div class='row'><h1 class='col'>The Tipping Point - A teaching aid game</h1></div>
+    <div class='row'><div class='col'><p>
+        Researchers at <abbr title='Ashoka Trust for Research in Ecology and The
+        Environment'> ATREE</abbr> are studying the impacts of pressures and adaptive ability
+        of socio-ecological systems in the Moyar Bhavani region in Tamil Nadu in
+        order to understand the implications of these changes on communities
+        living in the area. The Moyar Bhavani is characterized by a diverse
+        ecological and human landscape that consists of two distinct areas: the
+        predominantly agrarian Bhavani region and the forested Moyar landscape.
+    </p> </div> </div>
+    <div class='row'><div class='col'><img src='images/tipping-point/Tippingpoint_stand.jpg'/> </div></div>
+    <div class='row'><div class='col'><img src='images/tipping-point/Tippingpoint_blocks2.jpg'/> </div></div>
 
-    <div class='content col-10'>
-        <p> Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. </p>
-        <img src='letters.jpeg' />
-
-        <footer> ©2017 - Deepa Rodrigues </footer>
-    </div>
-
-  </div>
-  </body>
+</body>
 </html>
