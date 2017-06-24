@@ -1,3 +1,6 @@
+/tmp
+
+# Krita backups
 .*.kra
 *~
 
