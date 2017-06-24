@@ -8,6 +8,7 @@
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
           crossorigin="anonymous"
      >
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <style>
         @media (min-width: 800px)  {
            .container {
@@ -15,11 +16,20 @@
            }   
         }
 
+        .title  { font-size: 20px; color: #888;
+                  text-align: right;
+                }
+        .title a { color: #888; }
+        .title a:hover { color: #333; }
+
+        .footer { margin: 15px;
+                  text-align: center; font-size: 14px;
+                }
+
         img     { max-width: 100%; }
         body    { max-width: 700px; font-family: serif; }
         h1      { text-align: center; font-size: 30px;
                   border-bottom: 1px solid gray;
-                  margin-top: 40px; 
                 }
         p       { text-align: center; font-size: 18px; }
         .left   { text-align: right; }
@@ -35,6 +45,12 @@
     </style>
 </head>
 <body class='container'>
+    <div class='row title'><address class='col'>Deepa Rodrigues -
+        <a href='mailto:deepajrodrigues@gmail.com'   title='email'    ><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+        <a href='https://www.instagram.com/dpa.jay/' title='Instagram'><i class="fa fa-instagram"  aria-hidden="true"></i></a>
+        <a href='https://www.behance.net/deepajr'    title='Behance'  ><i class="fa fa-behance"    aria-hidden="true"></i></a>
+    </address></div>
+
     <div class='row'><h1 class='col'> Flat-pack stackable stools </h1></div>
     <div class='row'><div class='col'><p> During a two month apprenticeship
         program in Bhuj, Gujurat, we worked on a project that was developing space
@@ -69,5 +85,6 @@
     <div class='row'><div class='col'><img src='images/tipping-point/Tippingpoint_stand.jpg'/> </div></div>
     <div class='row'><div class='col'><img src='images/tipping-point/Tippingpoint_blocks2.jpg'/> </div></div>
 
+    <div class='row footer'><div class='col'>&copy; 2017 - Deepa Rodrigues </div></div>
 </body>
 </html>
